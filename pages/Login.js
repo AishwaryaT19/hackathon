@@ -1,36 +1,60 @@
-import './LoginUi.css';
-import profile from "./../image/a.png";
-import email from "./../image/email.jpg";
-import pass from "./../image/pass.png";
+import style from '../styles/Login.module.css';
+import { ethers } from "ethers";
+
 function LoginUi() {
+  // const connectWallet = async () => {
+  //   try {
+  //     const provider = new ethers.providers.Web3Provider(window.ethereum);  
+  //     const accounts = await provider.send("eth_requestAccounts", []);
+  //     setIsLoggedIn(true)
+  //     setCurrentAccount(accounts[0])
+  //     console.log(accounts[0])
+  //   }
+  //   catch (error) {
+  //     console.log(error)
+  //     // console.log("Please Install Metamsk")
+  //   }
+  // }
+
+  async function connectWallet() {
+    if(typeof window.ethereum !== 'undefined') {
+
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+    }
+  }
   return (
     <div className={style.main}>
-     <div className={style.sub-main}>
-       <div>
-         <div className={style.imgs}>
-           <div className={style.container-image}>
-             <img src={profile} alt="profile" className={style.profile}/>
-
+     <div className={style.sub_main}>
+       <div className={style.profile}>
+         <div className={style.imgContainer}>
+             
            </div>
 
 
-         </div>
          <div>
            <h1>Login Page</h1>
            <div>
-             <img src={email} alt="email" className={style.email}/>
+           <div className={style.imgContainer}>
+             
+
+           </div>
              <input type="text" placeholder="user name" className={style.name}/>
            </div>
            <div className="second-input">
-             <img src={pass} alt="pass" className="email"/>
-             <input type="password" placeholder="user name" className={style.name}/>
+           <div className={style.imgContainer}>
+             
+
            </div>
-          <div className={style.login-button}>
-          <button>Login</button>
+             <input type="password" placeholder="password" className={style.name}/>
+           </div>
+          <div className={style.login_button}>
+          <button onClick={connectWallet}>Login</button>
           </div>
            
-            <p className={styles.link}>
-              <a href="#">Forgot password ?</a> Or<a href="#">Sign Up</a>
+            <p className={style.link}>
+              <a className={style.link} href="#">Forgot password ?</a> 
+              <br/> 
+              <a className={style.link}href="#">Sign Up</a>
             </p>
            
  

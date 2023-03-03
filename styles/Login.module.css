@@ -5,36 +5,37 @@
   padding-top: 90px;
   padding-bottom: 90px;
   background-color: #e1e3eb;
+  position: absolute;
+  width: 92vw;
+  height: 88vh;
+  top:12vh;
+  left: 8vw;
 }
-.sub-main {
+.sub_main {
   display: flex;
   justify-content: center;
-  height: 550px;
+  height: 95%;
   width: 35%;
   box-shadow: 11px 12px 13px 12px rgb(207, 207, 207);
   padding-top: 30px;
   border-radius: 60px; 
   background-color: white;
 }
-.imgs {
-    padding-top: 20px;
-    justify-content: center;
-    display: flex;
-  }
-.container-image {
-  background-color: rgb(223, 221, 221); 
+
+.profile .imgContainer {
+  /* background-color: rgb(223, 221, 221);  */
   border-radius: 150px;
   align-items: center;
   display: flex;
   justify-content: center;
-  height: 115px;
-  width: 115px;
+  height: 5px;
+  width: 5px;
 }
-.profile {
+/* .profile {
   height: 100px;
   width: 100px;
   border-radius: 130px;
-} 
+}  */
 
 .input{
     width: 300px;
@@ -57,7 +58,7 @@
     padding-left: 70px;
     font-size: 20px;
 }
-.second-input{
+.second_input{
     padding-top: 20px;
 }
 
@@ -70,7 +71,7 @@
     font-size: 25px;
     border: none;
 }
-.login-button{
+.login_button{
     padding-top: 25px;
 }
 
@@ -79,6 +80,23 @@
     font-weight: 400;
 }
 
-.a{
-     color: blue;
- }
+.link{
+  text-decoration: none;
+  
+}
+
+ .main .imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 30%;
+  height: 20%;
+}
+.imgContainer > img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
