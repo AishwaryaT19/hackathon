@@ -29,7 +29,7 @@ function LoginUi() {
           <button>Login</button>
           </div>
            
-            <p className={stylink}>
+            <p className={styles.link}>
               <a href="#">Forgot password ?</a> Or<a href="#">Sign Up</a>
             </p>
            
