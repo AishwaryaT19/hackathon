@@ -3,7 +3,33 @@ import { useRouter } from 'next/router'
 
 const Navbar = () => {
     const router = useRouter()
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
+    const [currentAccount, setCurrentAccount] = useState('')
 
+    // check wallet
+  const checkWallet = async () => {
+    const { ethereum } = window
+    if (ethereum) {
+    }
+    else {
+      alert("Please Install Metamsk")
+    }
+  }
+
+  // connecting wallet
+  const connectWallet = async () => {
+    checkWallet()
+    try {
+      const provider = new ethers.providers.Web3Provider(window.ethereum);  //metamask gets connected
+      const accounts = await provider.send("eth_requestAccounts", []);
+      setIsLoggedIn(true)
+      setCurrentAccount(accounts[0])
+      console.log(accounts[0])
+    }
+    catch (error) {
+      console.log("Please Install Metamsk")
+    }
+  }
   return (
     <header className={styles.container}>
             <div className={styles.wrapper}>
