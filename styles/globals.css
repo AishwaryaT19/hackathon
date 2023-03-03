@@ -11,3 +11,7 @@ body {
   overflow-x: hidden;
   margin-left: 100px;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
