@@ -1,4 +1,4 @@
-.main {
+#main {
   background-color: black;
   color: white;
   height: 88vh;
@@ -10,6 +10,8 @@
   position: absolute;
   top: 12vh;
   left: 6vw;
+  padding-left: 6vw;
+  padding-bottom: 12vh;
 }
 
 .open {
@@ -18,7 +20,7 @@
   position: relative;
 }
 
-.main .imgContainer {
+#main .imgContainer {
   display: flex;
   justify-content: center;
   align-items: center;
