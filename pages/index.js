@@ -1,4 +1,5 @@
 import Head from "next/head";
+<<<<<<< HEAD
 import Link from "next/link";
 
 import {MdAccountCircle} from 'react-icons/md';
@@ -17,4 +18,14 @@ export default function Home() {
       </body>
     </>
   );
+=======
+import Image from "next/image";
+import { Inter } from "next/font/google";
+import styles from "@/styles/Home.module.css";
+
+const inter = Inter({ subsets: ["latin"] });
+
+export default function Home() {
+  return <></>;
+>>>>>>> d1197f7a24904fdf0872238059a20eee5ddbcba0
 }
